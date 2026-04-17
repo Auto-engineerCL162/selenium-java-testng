@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/libraries/selenium-server-4.41.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/sourceDocs" />
+      <root url="jar://$PROJECT_DIR$/libraries/selenium-server-4.41.0.jar!/" />
+    </SOURCES>
   </library>
 </component>
