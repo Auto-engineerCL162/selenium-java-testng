@@ -7,6 +7,8 @@ import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.Logs;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterClass;
@@ -46,7 +48,7 @@ public class Topic_06_WebBrowser_Commands {
         driver.findElement(By.xpath(""));
 
         // Đi tìm n element
-        driver.findElements(By.xpath(""));
+        driver.findElements(By.xpath("")); //*
 
         WebDriver.Options options = driver.manage();
 
@@ -114,31 +116,51 @@ public class Topic_06_WebBrowser_Commands {
 
         // đến 1 tc khác ... (ko cần login - set cookie cũ r refresh
         for (Cookie cookie : cookie){
+            // add cookie theo thứ tự
             driver.manage().addCookie(cookie);
         }
-
         driver.navigate().refresh(); // Login thành công
 
-        Logs log = driver.manage();
+        Logs log = driver.manage().logs();
+        LogEntries logEntries = log.get("BROWSER");
+
+        for (LogEntry logEn:  logEntries){
+            System.out.println(logEn);
+        }
+
+        log.getAvailableLogTypes();
+
+        WebDriver.Navigation navigation = driver.navigate();
+
+        // Refresh /f5
+        navigation.back();
+
+        // quay lại trang trước đó
+        navigation.forward();
+
+        // Mở url bất kì
+        navigation.to("https://demo.nopcommerce.com/customer/info");
+
+        // Alert /Iframe/ Window(Tab)
+        WebDriver.TargetLocator targetLocator = driver.switchTo();
 
 
+        // Allert
+        targetLocator.alert().accept();  //*
+        targetLocator.alert().dismiss();  //*
 
+        //frame/ iframe
+        targetLocator.frame("");
+        targetLocator.defaultContent();
 
+        //Windows
+        targetLocator.window("");
 
+        //Lấy ra id của tab/ window đang active //*
+        driver.getWindowHandles();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // lấy ra tất cả id của tất cả các tab/ window đang có //*
+        driver.getWindowHandles();
 
 
 
