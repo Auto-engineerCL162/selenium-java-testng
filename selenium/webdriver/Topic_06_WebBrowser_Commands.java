@@ -30,8 +30,7 @@ public class Topic_06_WebBrowser_Commands {
         driver = new ChromeDriver();
         driver = new SafariDriver();
         driver = new InternetExplorerDriver();
-
-        driver = new ChromiumDriver();
+       // driver = new ChromiumDriver();
     }
 
     // Step 2_TC/ Execute
@@ -52,9 +51,9 @@ public class Topic_06_WebBrowser_Commands {
 
         WebDriver.Options options = driver.manage();
 
-        // Selenium ver 3
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        options.timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//        // Selenium ver 3
+//        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//        options.timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 
         WebDriver.Timeouts  timeouts = driver.manage().timeouts();
@@ -89,79 +88,79 @@ public class Topic_06_WebBrowser_Commands {
 
         //test GUI: graphic,
         // fon, color, size, position
-        driver.manage().window().setSize(new Dimension(1366, 768);
+        driver.manage().window().setSize(new Dimension(1366, 768));
         driver.manage().window().getSize();
 
         driver.manage().window().setPosition(new Point(0,0));
         driver.manage().window().getPosition();
 
 
-        //Lấy hết tất cả cookie
-        driver.manage().getCookies();
-
-        // Lấy cookie ở tab debuger -> cookie
-        driver.manage().getCookieNamed("...");
-
-        //Xoá cookie
-        driver.manage().deleteAllCookies();
-
-        for (Cookie cookie: cookie){
-            // xoá cookie theo thứ tự
-            driver.manage().deleteCookie(cookie);
-        }
-
-
-        // Xoá cookie theo tên
-        driver.manage().deleteCookieNamed("Name");
-
-        // đến 1 tc khác ... (ko cần login - set cookie cũ r refresh
-        for (Cookie cookie : cookie){
-            // add cookie theo thứ tự
-            driver.manage().addCookie(cookie);
-        }
-        driver.navigate().refresh(); // Login thành công
-
-        Logs log = driver.manage().logs();
-        LogEntries logEntries = log.get("BROWSER");
-
-        for (LogEntry logEn:  logEntries){
-            System.out.println(logEn);
-        }
-
-        log.getAvailableLogTypes();
-
-        WebDriver.Navigation navigation = driver.navigate();
-
-        // Refresh /f5
-        navigation.back();
-
-        // quay lại trang trước đó
-        navigation.forward();
-
-        // Mở url bất kì
-        navigation.to("https://demo.nopcommerce.com/customer/info");
-
-        // Alert /Iframe/ Window(Tab)
-        WebDriver.TargetLocator targetLocator = driver.switchTo();
-
-
-        // Allert
-        targetLocator.alert().accept();  //*
-        targetLocator.alert().dismiss();  //*
-
-        //frame/ iframe
-        targetLocator.frame("");
-        targetLocator.defaultContent();
-
-        //Windows
-        targetLocator.window("");
-
-        //Lấy ra id của tab/ window đang active //*
-        driver.getWindowHandles();
-
-        // lấy ra tất cả id của tất cả các tab/ window đang có //*
-        driver.getWindowHandles();
-
+//        //Lấy hết tất cả cookie
+//        driver.manage().getCookies();
+//
+//        // Lấy cookie ở tab debuger -> cookie
+//        driver.manage().getCookieNamed("...");
+//
+//        //Xoá cookie
+//        driver.manage().deleteAllCookies();
+//
+//        for (Cookie cookie: cookie){
+//            // xoá cookie theo thứ tự
+//            driver.manage().deleteCookie(cookie);
+//        }
+//
+//
+//        // Xoá cookie theo tên
+//        driver.manage().deleteCookieNamed("Name");
+//
+//        // đến 1 tc khác ... (ko cần login - set cookie cũ r refresh
+//        for (Cookie cookie : cookie){
+//            // add cookie theo thứ tự
+//            driver.manage().addCookie(cookie);
+//        }
+//        driver.navigate().refresh(); // Login thành công
+//
+//        Logs log = driver.manage().logs();
+//        LogEntries logEntries = log.get("BROWSER");
+//
+//        for (LogEntry logEn:  logEntries){
+//            System.out.println(logEn);
+//        }
+//
+//        log.getAvailableLogTypes();
+//
+//        WebDriver.Navigation navigation = driver.navigate();
+//
+//        // Refresh /f5
+//        navigation.back();
+//
+//        // quay lại trang trước đó
+//        navigation.forward();
+//
+//        // Mở url bất kì
+//        navigation.to("https://demo.nopcommerce.com/customer/info");
+//
+//        // Alert /Iframe/ Window(Tab)
+//        WebDriver.TargetLocator targetLocator = driver.switchTo();
+//
+//
+//        // Allert
+//        targetLocator.alert().accept();  //*
+//        targetLocator.alert().dismiss();  //*
+//
+//        //frame/ iframe
+//        targetLocator.frame("");
+//        targetLocator.defaultContent();
+//
+//        //Windows
+//        targetLocator.window("");
+//
+//        //Lấy ra id của tab/ window đang active //*
+//        driver.getWindowHandles();
+//
+//        // lấy ra tất cả id của tất cả các tab/ window đang có //*
+//        driver.getWindowHandles();
+//
 
 
     }

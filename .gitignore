@@ -28,3 +28,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+01 - Software/selenium-server-4.43.0.jar
+01 - Software/testng-7.12.0.jar
+
+02 - Selenium Webdriver/selenium-java-testng/libraries/selenium-server-4.41.0.jar
+02 - Selenium Webdriver/selenium-java-testng/libraries/selenium-server-standalone-3.141.59.jar
+02 - Selenium Webdriver/selenium-java-testng/libraries/testng-7.12.0.jar
