@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 public class Topic_08_Element_Excercise_Register {
     WebDriver driver;
 
-
     @BeforeClass
     public void initBrowser(){
         driver = new FirefoxDriver();
