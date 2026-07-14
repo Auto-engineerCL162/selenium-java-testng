@@ -3,7 +3,6 @@ package webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -12,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-public class Topic_09_Textbox_TextArea {
+public class Topic_09_Textbox_TextArea_I {
     WebDriver driver;
     String firstName, lastName, fullName, emailAddress, password, reviewProduct;
 
