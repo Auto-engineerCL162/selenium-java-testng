@@ -128,8 +128,14 @@ public class Topic_03_XPath_Css {
         driver.findElement(By.id("txtPassword")).sendKeys("123456");
         driver.findElement(By.id("txtCPassword")).sendKeys("123456");
 
-        //Validate thiếu số đt
+        //Validate < 10 số
         driver.findElement(By.id("txtPhone")).sendKeys("091245");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        Assert.assertEquals(driver.findElement(By.id("txtPhone-error")).getText(), "Số điện thoại phải từ 10-11 số.");
+        driver.findElement(By.id("txtPhone")).clear();
+
+        //Validate > 10 số
+        driver.findElement(By.id("txtPhone")).sendKeys("0912454353453453");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         Assert.assertEquals(driver.findElement(By.id("txtPhone-error")).getText(), "Số điện thoại phải từ 10-11 số.");
         driver.findElement(By.id("txtPhone")).clear();

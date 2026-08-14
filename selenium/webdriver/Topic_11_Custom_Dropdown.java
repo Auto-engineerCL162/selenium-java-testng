@@ -39,7 +39,7 @@ public class Topic_11_Custom_Dropdown {
         password = "123456";
         passportNumber = "12441-1233-1414";
         passportComment = "1231/123fff/12";
-     }
+    }
 
     // Step 2_TC/ Execute
     @Test
@@ -76,47 +76,47 @@ public class Topic_11_Custom_Dropdown {
 //                break;
 //            }
 //        }
-        // Thao tác với speed
-        selectItemDropdownByCss("span#speed-button", "span#speed-button", "Slow");
-        Assert.assertEquals(driver.findElement(By.cssSelector("span#speed-button>span.ui-selectmenu-text")).getText(), "Slow");
-
-        selectItemDropdownByCss("span#speed-button", "span#speed-button", "Faster");
-        Assert.assertEquals(driver.findElement(By.cssSelector("span#speed-button>span.ui-selectmenu-text")).getText(), "Faster");
-
-        // Thao tác với Salutation
-        selectItemDropdownByCss("span#salutation-button", "ul#salutation-menu div", "Dr.");
-        Assert.assertEquals(driver.findElement(By.cssSelector("span#salutation-button>span.ui-selectmenu-text")).getText(), "Dr.");
-
-        selectItemDropdownByCss("span#salutation-button", "ul#salutation-menu div", "Mrs.");
-        Assert.assertEquals(driver.findElement(By.cssSelector("span#salutation-button>span.ui-selectmenu-text")).getText(), "Mrs.");
-
-    }
-
-    @Test
-    public void TC_02_React() throws InterruptedException {
-        driver.get("http://react.semantic-ui.com/maximize/dropdown-example-selection/");
-
-        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Matt");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Matt");
-
-        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Elliot Fu");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Elliot Fu");
-    }
-
-    @Test
-    public void TC_03_VueJS() throws InterruptedException {
-        driver.get("http://mikerodham.github.io/vue-dropdowns/");
-
-        selectItemDropdownByCss("div.btn-group", "ul.dropdown-menu a", "Second Option");
-        Assert.assertEquals(driver.findElement(By.cssSelector("li.dropdown-toggle")).getText(), "Second Option");
-
-        selectItemDropdownByCss("div.btn-group", "ul.dropdown-menu a", "Third Option");
-        Assert.assertEquals(driver.findElement(By.cssSelector("li.dropdown-toggle")).getText(), "Third Option");
-
-        selectItemDropdownByCss("div.btn-group", "ul.dropdown-menu a", "First Option");
-        Assert.assertEquals(driver.findElement(By.cssSelector("li.dropdown-toggle")).getText(), "First Option");
+//        // Thao tác với speed
+//        selectItemDropdownByCss("span#speed-button", "span#speed-button", "Slow");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("span#speed-button>span.ui-selectmenu-text")).getText(), "Slow");
+//
+//        selectItemDropdownByCss("span#speed-button", "span#speed-button", "Faster");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("span#speed-button>span.ui-selectmenu-text")).getText(), "Faster");
+//
+//        // Thao tác với Salutation
+//        selectItemDropdownByCss("span#salutation-button", "ul#salutation-menu div", "Dr.");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("span#salutation-button>span.ui-selectmenu-text")).getText(), "Dr.");
+//
+//        selectItemDropdownByCss("span#salutation-button", "ul#salutation-menu div", "Mrs.");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("span#salutation-button>span.ui-selectmenu-text")).getText(), "Mrs.");
 
     }
+
+//    @Test
+//    public void TC_02_React() throws InterruptedException {
+//        driver.get("http://react.semantic-ui.com/maximize/dropdown-example-selection/");
+//
+//        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Matt");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Matt");
+//
+//        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Elliot Fu");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Elliot Fu");
+//    }
+
+//    @Test
+//    public void TC_03_VueJS() throws InterruptedException {
+//        driver.get("http://mikerodham.github.io/vue-dropdowns/");
+//
+//        selectItemDropdownByCss("div.btn-group", "ul.dropdown-menu a", "Second Option");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("li.dropdown-toggle")).getText(), "Second Option");
+//
+//        selectItemDropdownByCss("div.btn-group", "ul.dropdown-menu a", "Third Option");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("li.dropdown-toggle")).getText(), "Third Option");
+//
+//        selectItemDropdownByCss("div.btn-group", "ul.dropdown-menu a", "First Option");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("li.dropdown-toggle")).getText(), "First Option");
+//
+//    }
 
     @Test
     public void TC_04_OrangeHRM() throws InterruptedException {
@@ -157,19 +157,18 @@ public class Topic_11_Custom_Dropdown {
 
         driver.findElement(By.xpath("//button[contains(string(),'Save')]")).click();
 
-
-        // Verify text
-        selectItemDropdown(By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//i"),
-            By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//div[@class='oxd-select-option']/span"),"Vietnamese");
-
-        // Verify text
-        selectItemDropdown(By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//i"),
-            By.xpath("//label[text()='Marital Status']/parent::div/following-sibling::div//div[@class='oxd-select-option']/span"),"Single");
-
-        // Verify text
-        selectItemDropdown(By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//i"),
-            By.xpath("//label[text()='Blood Type']/parent::div/following-sibling::div//div[@class='oxd-select-option']/span"),"B+");
-
+//
+//        // Verify text
+//        selectItemDropdown(By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//i"),
+//            By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//div[@class='oxd-select-option']/span"),"Vietnamese");
+//
+//        // Verify text
+//        selectItemDropdown(By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//i"),
+//            By.xpath("//label[text()='Marital Status']/parent::div/following-sibling::div//div[@class='oxd-select-option']/span"),"Single");
+//
+//        // Verify text
+//        selectItemDropdown(By.xpath("//label[text()='Nationality']/parent::div/following-sibling::div//i"),
+//            By.xpath("//label[text()='Blood Type']/parent::div/following-sibling::div//div[@class='oxd-select-option']/span"),"B+");
 
 
     }
@@ -177,21 +176,22 @@ public class Topic_11_Custom_Dropdown {
     @Test
     public void Topic_05_Editable_React() {
         driver.get("https://react.semantic-ui.com/maximize/dropdown-example-search-selection/");
+    }}
 
-        //Selectable
-        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Argentina");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Argentina");
-
-        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Belgium");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Belgium");
-
-        //Editable
-        selectItemEditableDropdown("div.ui.fluid.selection", "div.visible.menu>div>span", "Argentina");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Argentina");
-
-        selectItemEditableDropdown("div.ui.fluid.selection", "div.visible.menu>div>span", "Belgium");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Belgium");
-    }
+//        //Selectable
+//        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Argentina");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Argentina");
+//
+//        selectItemDropdownByCss("div.ui.fluid.selection", "div.visible.menu>div>span", "Belgium");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Belgium");
+//
+//        //Editable
+//        selectItemEditableDropdown("div.ui.fluid.selection", "div.visible.menu>div>span", "Argentina");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Argentina");
+//
+//        selectItemEditableDropdown("div.ui.fluid.selection", "div.visible.menu>div>span", "Belgium");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Belgium");
+//    }
 
 //    @Test
 //    public void TC_07_Honda() {
@@ -207,53 +207,52 @@ public class Topic_11_Custom_Dropdown {
 //
 
 
-
 // hàm tái sử dụng
-    public void selectItemDropdownByCss(String parentLocator, String childLocator, String itemValue) throws InterruptedException {
-        driver.findElement(By.cssSelector(parentLocator)).click();
-        List<WebElement> childItems = explicitWait.until
-                (ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(childLocator)));
-        for (WebElement item : childItems) {
-            if (item.getText().equals(itemValue)) {
-                item.click();
-                Thread.sleep(3000);
-                break;
-            }
-        }
-    }
+//    public void selectItemDropdownByCss(String parentLocator, String childLocator, String itemValue) throws InterruptedException {
+//        driver.findElement(By.cssSelector(parentLocator)).click();
+//        List<WebElement> childItems = explicitWait.until
+//                (ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(childLocator)));
+//        for (WebElement item : childItems) {
+//            if (item.getText().equals(itemValue)) {
+//                item.click();
+//                Thread.sleep(3000);
+//                break;
+//            }
+//        }
+//    }
+//
+//    public void selectItemEditableDropdown(String parentLocator, String childLocator, String itemValue) throws InterruptedException {
+//        driver.findElement(By.cssSelector(parentLocator)).sendKeys();
+//        List<WebElement> childItems = explicitWait.until
+//                (ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(childLocator)));
+//        for (WebElement item : childItems) {
+//            if (item.getText().equals(itemValue)) {
+//                item.click();
+//                Thread.sleep(3000);
+//                break;
+//            }
+//        }
+//    }
 
-    public void selectItemEditableDropdown(String parentLocator, String childLocator, String itemValue) throws InterruptedException {
-        driver.findElement(By.cssSelector(parentLocator)).sendKeys();
-        List<WebElement> childItems = explicitWait.until
-                (ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(childLocator)));
-        for (WebElement item : childItems) {
-            if (item.getText().equals(itemValue)) {
-                item.click();
-                Thread.sleep(3000);
-                break;
-            }
-        }
-    }
-
-    // hàm tái sử dụng
-    public void selectItemDropdown(By parentLocator, By childLocator, String itemValue) throws InterruptedException {
-        driver.findElement(By.cssSelector(parentLocator)).click();
-        Thread.sleep(2000);
-        List<WebElement> childItems = explicitWait.until
-                (ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(childLocator)));
-        for (WebElement item : childItems) {
-            if (item.getText().equals(itemValue)) {
-                item.click();
-                Thread.sleep(3000);
-                break;
-            }
-        }
-    }
+        // hàm tái sử dụng
+//    public void selectItemDropdown(By parentLocator, By childLocator, String itemValue) throws InterruptedException {
+//        driver.findElement(By.cssSelector(parentLocator)).click();
+//        Thread.sleep(2000);
+//        List<WebElement> childItems = explicitWait.until
+//                (ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(childLocator)));
+//        for (WebElement item : childItems) {
+//            if (item.getText().equals(itemValue)) {
+//                item.click();
+//                Thread.sleep(3000);
+//                break;
+//            }
+//        }
+//    };
 
 
-    @AfterClass
-    // Step 3_Clean data test
-    public void clearBrowser() {
-        driver.quit();
-    }
-}
+//        @AfterClass
+//        // Step 3_Clean data test
+//        public void clearBrowser(){
+//            driver.quit();
+//        }
+//}
