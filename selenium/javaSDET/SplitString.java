@@ -1,4 +1,4 @@
-package javaSDET.javaBasic;
+package javaSDET;
 
 public class SplitString {
     static void main(String[] args) {
