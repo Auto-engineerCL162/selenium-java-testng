@@ -1,16 +1,25 @@
 package javaSDET.javaBasic;
 
+import java.io.File;
+
 public class SystemProperties {
 
     static void main(String[] args) {
 
-        String filePath = System.getProperty("user.dir")
-                + "\\src\\test\\resources\\dragDrop.js";
+        String uploadFilePath = System.getProperty("user.dir") + File.separator + "uploadFiles" + File.separator;
 
-        System.out.println(filePath);
+        String firstImage = "TestImg1.png";
+        String secondImage = "TestImg2.png";
+        String thirdImage = "TestImg3.png";
 
-        System.out.println(System.getProperty("user.dir"));
-        System.out.println(System.getProperty("os.name"));
-        System.out.println(System.getProperty("java.version"));
+        String firstImagePath = uploadFilePath + firstImage;
+        String secondImagePath = uploadFilePath + secondImage;
+        String thirdImagePath = uploadFilePath + thirdImage;
+
+        System.out.println(firstImagePath);
+        System.out.println(secondImagePath);
+        System.out.println(thirdImagePath);
+
+
     }
 }
