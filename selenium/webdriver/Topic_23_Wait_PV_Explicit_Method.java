@@ -6,14 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Topic_23_Wait_PV_Explicit {
+public class Topic_23_Wait_PV_Explicit_Method {
     // Step 1_set up browser / page /...
     WebDriver driver;
     WebDriverWait explicitWait;
